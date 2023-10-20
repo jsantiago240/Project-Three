@@ -14,11 +14,17 @@ class ItemsSold {
 
         // Displays the number of times a specified item was sold
         void getQuantity();
+
+        // Display a list of each item and its frequency
+        void printMap();
        
 
     private:
         // Map of each item sold and its quantity
         map<string, int> itemMap;
+
+        // Vector of each unique item name
+
 
         // Uses input file to create item map
         void loadFromFile();

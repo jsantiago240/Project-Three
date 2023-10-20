@@ -57,6 +57,18 @@ void ItemsSold::getQuantity() {
     cout << "Frequency of this item: " << itemMap.at(itemToFind) << "\n\n";
 }
 
+// Display a list of each item and its frequency
+void ItemsSold::printMap() {
+    // For each item in the map
+    for (auto i = itemMap.begin(); i != itemMap.end(); i++) {
+        // Print the name of the item and its frequency
+        cout << i->first << ' ' << i->second << endl;
+    }
+
+    // Print blank line
+    cout << endl;
+}
+
 // Default constructor
 ItemsSold::ItemsSold() {
     // Use input file to create map

@@ -8,18 +8,17 @@ using namespace std;
 void displayMenu() {
 
     cout << "Menu Options:\n";    
-    cout << "1 - Search how many times a specific item was sold\n";
-    cout << "2 - \n";
+    cout << "1 - Find the frequency of a specific item\n";
+    cout << "2 - Display a list of each item and its frequency\n";
+    cout << "3 - \n";
     
     // ...
     cout << "Enter choice: ";
 }
 
 int main() {
-    // Create map of all items sold using input file 
+    // Create map of all items sold using the input file 
     ItemsSold itemMap;
-
-    // Display menu to user
 
     int input = 0;
 
@@ -31,10 +30,15 @@ int main() {
         cin >> input;
 
         switch (input) {
-            // Menu option 1, find items quantity
+            // Menu option 1, find an item's quantity
             case 1:
                 itemMap.getQuantity();
                 break;
+            // Menu option 2, print map
+            case 2:
+                itemMap.printMap();
+                break;
+
         }
     }
 }
