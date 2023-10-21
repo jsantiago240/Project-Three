@@ -13,10 +13,13 @@ class ItemsSold {
         ItemsSold();
 
         // Displays the number of times a specified item was sold
-        void getQuantity();
+        void findQuantity();
 
         // Display a list of each item and its frequency
         void printMap();
+
+        // Display the map in the form of a histogram
+        void printHistogram();
        
 
     private:

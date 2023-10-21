@@ -48,7 +48,7 @@ void ItemsSold::loadFromFile() {
 }
 
 // Displays the number of times a specified item was sold
-void ItemsSold::getQuantity() {
+void ItemsSold::findQuantity() {
     string itemToFind;
 
     cout << "Enter the name of the item you wish to look for: ";
@@ -63,6 +63,22 @@ void ItemsSold::printMap() {
     for (auto i = itemMap.begin(); i != itemMap.end(); i++) {
         // Print the name of the item and its frequency
         cout << i->first << ' ' << i->second << endl;
+    }
+
+    // Print blank line
+    cout << endl;
+}
+
+// Print the map in the form of a histogram
+void ItemsSold::printHistogram() {
+    // For each item in the map
+    for (auto i = itemMap.begin(); i != itemMap.end(); i++) {
+        // Print the name of the item
+        cout.width(20);
+        cout << setfill(' ') << left << i->first << ' ';
+
+        // Print characters to represent item's frequency
+        cout << setfill('*') << setw(i->second + 1) << ' ' << endl;
     }
 
     // Print blank line
