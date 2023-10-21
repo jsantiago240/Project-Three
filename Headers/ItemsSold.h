@@ -20,17 +20,16 @@ class ItemsSold {
 
         // Display the map in the form of a histogram
         void printHistogram();
-       
 
     private:
         // Map of each item sold and its quantity
         map<string, int> itemMap;
 
-        // Vector of each unique item name
-
-
         // Uses input file to create item map
         void loadFromFile();
+
+        // Create backup data file from item map
+        void createBackup();
 
 };
 

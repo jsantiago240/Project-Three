@@ -47,6 +47,31 @@ void ItemsSold::loadFromFile() {
     infile.close();
 }
 
+// Create backup data file from item map
+void ItemsSold::createBackup() {
+    // Initialize output file stream and create file
+    ofstream outfile;
+    outfile.open("frequency.dat");
+
+    // Ensure file was opened successfully
+    if (!outfile.is_open()) {
+        cout << "Error opening file\n";
+        exit(1);
+    }
+
+    // For each item in the map
+    for (auto item = itemMap.begin(); item != itemMap.end(); item++) {
+        // Print the item's name
+        outfile << item->first << ' ';
+
+        // Print the item's frequency
+        outfile << item->second << endl;
+    }
+
+    // Close the file
+    outfile.close();
+}
+
 // Displays the number of times a specified item was sold
 void ItemsSold::findQuantity() {
     string itemToFind;
@@ -89,5 +114,8 @@ void ItemsSold::printHistogram() {
 ItemsSold::ItemsSold() {
     // Use input file to create map
     loadFromFile();
+
+    // Create backup data file
+    createBackup();
 }
 
