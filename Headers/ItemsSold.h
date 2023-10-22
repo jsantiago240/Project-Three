@@ -6,7 +6,7 @@
 
 using namespace std;
 
-// ItemsSold Class, map containing each item sold and its quantity
+// ItemsSold Class, map of each item sold and its frequency
 class ItemsSold {
     public:
         // Default constructor
@@ -22,7 +22,7 @@ class ItemsSold {
         void printHistogram();
 
     private:
-        // Map of each item sold and its quantity
+        // Map of each item sold and its frequency
         map<string, int> itemMap;
 
         // Uses input file to create item map
