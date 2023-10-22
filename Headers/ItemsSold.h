@@ -1,3 +1,4 @@
+// Defines this header
 #ifndef HEADERS_ITEMSSOLD_H
 #define HEADERS_ITEMSSOLD_H
 
@@ -6,7 +7,7 @@
 
 using namespace std;
 
-// ItemsSold Class, map of each item sold and its frequency
+// ItemsSold Class, map of items sold and their frequencies
 class ItemsSold {
     public:
         // Default constructor
@@ -22,7 +23,7 @@ class ItemsSold {
         void printHistogram();
 
     private:
-        // Map of each item sold and its frequency
+        // Map of each item name and its frequency
         map<string, int> itemMap;
 
         // Uses input file to create item map
@@ -30,7 +31,6 @@ class ItemsSold {
 
         // Create backup data file from item map
         void createBackup();
-
 };
 
 #endif
